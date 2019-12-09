@@ -1,4 +1,4 @@
-package censusanalyser;
+package CSVBuilder;
 
 import CSVBuilder.ICSVBuilder;
 import CSVBuilder.OpenCSVBuilder;
