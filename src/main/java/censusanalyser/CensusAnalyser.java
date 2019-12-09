@@ -12,14 +12,13 @@ import java.util.stream.StreamSupport;
 
 public class CensusAnalyser
 {
-   OpenCSVBuilder openCSVBuilder = new OpenCSVBuilder();
-
    public int loadIndiaCensusData(String csvFilePath) throws CensusAnalyserException
    {
-      CsvToBean<IndiaCensusCSV> csvToBean = null;
+
       try (Reader reader = Files.newBufferedReader(Paths.get(csvFilePath)))
       {
-         Iterator<IndiaCensusCSV> censusCSVIterator = openCSVBuilder.getCSVFileIterator(reader, IndiaCensusCSV.class);
+         ICSVBuilder csvBuilder = CSVBuilderFactory.createCSVBuilder();
+         Iterator<IndiaCensusCSV> censusCSVIterator = csvBuilder.getCSVFileIterator(reader, IndiaCensusCSV.class);
          return getCount(censusCSVIterator);
       }
       catch (IOException e)
@@ -33,13 +32,10 @@ public class CensusAnalyser
 
    public int loadIndiaStateCode(String csvFilePath) throws CensusAnalyserException
    {
-
-      CsvToBean<IndiaStateCodeCSV> csvToBean = null;
-      try (Reader reader = Files.
-            newBufferedReader(Paths.
-                  get(csvFilePath)))
+      try (Reader reader = Files.newBufferedReader(Paths.get(csvFilePath)))
       {
-         Iterator<IndiaStateCodeCSV> stateCodeCSVIterator = openCSVBuilder.
+         ICSVBuilder csvBuilder = CSVBuilderFactory.createCSVBuilder();
+         Iterator<IndiaStateCodeCSV> stateCodeCSVIterator = csvBuilder.
                getCSVFileIterator(reader, IndiaStateCodeCSV.class);
          return getCount(stateCodeCSVIterator);
       }
