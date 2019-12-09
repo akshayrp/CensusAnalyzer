@@ -23,6 +23,9 @@ public class CensusAnalyserTest
       catch (CensusAnalyserException e)
       {
       }
+      catch (CSVBuilderException e)
+      {
+      }
    }
 
    @Test
@@ -39,6 +42,9 @@ public class CensusAnalyserTest
       {
          Assert.assertEquals(CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM, e.type);
       }
+      catch (CSVBuilderException e)
+      {
+      }
    }
 
 
@@ -53,6 +59,9 @@ public class CensusAnalyserTest
          Assert.assertEquals(37,numberOfRecord);
       }
       catch (CensusAnalyserException e)
+      {
+      }
+      catch (CSVBuilderException e)
       {
       }
 
