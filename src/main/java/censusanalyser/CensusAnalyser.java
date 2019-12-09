@@ -12,18 +12,22 @@ import java.util.stream.StreamSupport;
 
 public class CensusAnalyser
 {
+   OpenCSVBuilder openCSVBuilder = new OpenCSVBuilder();
+
    public int loadIndiaCensusData(String csvFilePath) throws CensusAnalyserException
    {
       CsvToBean<IndiaCensusCSV> csvToBean = null;
       try (Reader reader = Files.newBufferedReader(Paths.get(csvFilePath)))
       {
-         Iterator<IndiaCensusCSV> censusCSVIterator = this.getCSVFileIterator(reader, IndiaCensusCSV.class);
+         Iterator<IndiaCensusCSV> censusCSVIterator = openCSVBuilder.getCSVFileIterator(reader, IndiaCensusCSV.class);
          return getCount(censusCSVIterator);
       }
       catch (IOException e)
       {
          throw new CensusAnalyserException(e.getMessage(),
-               CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM);
+               CensusAnalyserException.
+                     ExceptionType.
+                     CENSUS_FILE_PROBLEM);
       }
    }
 
@@ -31,39 +35,29 @@ public class CensusAnalyser
    {
 
       CsvToBean<IndiaStateCodeCSV> csvToBean = null;
-      try (Reader reader = Files.newBufferedReader(Paths.get(csvFilePath)))
+      try (Reader reader = Files.
+            newBufferedReader(Paths.
+                  get(csvFilePath)))
       {
-         Iterator<IndiaStateCodeCSV> stateCodeCSVIterator = this.getCSVFileIterator(reader, IndiaStateCodeCSV.class);
+         Iterator<IndiaStateCodeCSV> stateCodeCSVIterator = openCSVBuilder.
+               getCSVFileIterator(reader, IndiaStateCodeCSV.class);
          return getCount(stateCodeCSVIterator);
       }
       catch (IOException e)
       {
          throw new CensusAnalyserException(e.getMessage(),
-               CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM);
+               CensusAnalyserException.
+                     ExceptionType.
+                     CENSUS_FILE_PROBLEM);
       }
    }
 
    private <E> int getCount(Iterator<E> csvIterator)
    {
       Iterable<E> csvIterable = () -> csvIterator;
-      int numberOfEntries = (int) StreamSupport.stream(csvIterable.spliterator(), false).count();
+      int numberOfEntries = (int) StreamSupport.stream
+            (csvIterable.
+                  spliterator(), false).count();
       return numberOfEntries;
-   }
-
-   private <E> Iterator<E> getCSVFileIterator(Reader reader, Class<E> csvClass) throws CensusAnalyserException
-   {
-      try
-      {
-         CsvToBeanBuilder<E> csvToBeanBuilder = new CsvToBeanBuilder<>(reader);
-         csvToBeanBuilder.withType(csvClass);
-         csvToBeanBuilder.withIgnoreLeadingWhiteSpace(true);
-         CsvToBean<E> csvToBean = csvToBeanBuilder.build();
-         return csvToBean.iterator();
-      }
-      catch (IllegalStateException e)
-      {
-         throw new CensusAnalyserException(e.getMessage(),
-               CensusAnalyserException.ExceptionType.UNABLE_TO_PARSE);
-      }
    }
 }
