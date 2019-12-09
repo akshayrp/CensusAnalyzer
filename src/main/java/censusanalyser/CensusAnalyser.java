@@ -14,16 +14,16 @@ public class CensusAnalyser
 {
    public int loadIndiaCensusData(String csvFilePath) throws CensusAnalyserException
    {
-      try
+      CsvToBean<IndiaCensusCSV> csvToBean = null;
+      try (Reader reader = Files.newBufferedReader(Paths.get(csvFilePath)))
       {
-         Reader reader = Files.newBufferedReader(Paths.get(csvFilePath));
          CsvToBeanBuilder<IndiaCensusCSV> csvToBeanBuilder = new CsvToBeanBuilder<>(reader);
          csvToBeanBuilder.withType(IndiaCensusCSV.class);
          csvToBeanBuilder.withIgnoreLeadingWhiteSpace(true);
-         CsvToBean<IndiaCensusCSV> csvToBean = csvToBeanBuilder.build();
+         csvToBean = csvToBeanBuilder.build();
          Iterator<IndiaCensusCSV> censusCSVIterator = csvToBean.iterator();
-         Iterable<IndiaCensusCSV>  csvIterable = () -> censusCSVIterator;
-         int numberOfEntries = (int) StreamSupport.stream(csvIterable.spliterator(),false).count();
+         Iterable<IndiaCensusCSV> csvIterable = () -> censusCSVIterator;
+         int numberOfEntries = (int) StreamSupport.stream(csvIterable.spliterator(), false).count();
          return numberOfEntries;
       }
       catch (IOException e)
@@ -36,5 +36,7 @@ public class CensusAnalyser
          throw new CensusAnalyserException(e.getMessage(),
                CensusAnalyserException.ExceptionType.UNABLE_TO_PARSE);
       }
+
+
    }
 }
