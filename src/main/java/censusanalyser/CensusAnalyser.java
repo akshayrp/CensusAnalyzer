@@ -3,10 +3,12 @@ package censusanalyser;
 import CSVBuilder.CSVBuilderException;
 import CSVBuilder.CSVBuilderFactory;
 import CSVBuilder.ICSVBuilder;
+
 import com.google.gson.Gson;
 
 import java.io.IOException;
 import java.io.Reader;
+import java.lang.reflect.InvocationTargetException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -17,20 +19,24 @@ import java.util.stream.StreamSupport;
 
 public class CensusAnalyser
 {
-   List<IndiaCensusDAO> censusList;
+   List<IndiaCensusDAO> censusList = new ArrayList<>();
 
-   public CensusAnalyser()
-   {
-      this.censusList = new ArrayList<IndiaCensusDAO>();
-   }
 
-   public int loadIndiaCensusData(String csvFilePath) throws CensusAnalyserException, CSVBuilderException
+   public int loadIndiaCensusData(String csvFilePath) throws CensusAnalyserException
    {
       try (Reader reader = Files.newBufferedReader(Paths.get(csvFilePath)))
       {
          ICSVBuilder csvBuilder = CSVBuilderFactory.createCSVBuilder();
-         Iterator<IndiaCensusCSV> csvFileIterator = csvBuilder.getCSVFileIterator(reader, IndiaCensusCSV.class);
-         while(csvFileIterator.hasNext())
+         Iterator<IndiaCensusCSV> csvFileIterator = null;
+         try
+         {
+            csvFileIterator = csvBuilder.getCSVFileIterator(reader, IndiaCensusCSV.class);
+         }
+         catch (RuntimeException e)
+         {
+            throw new CensusAnalyserException(e.getMessage(),CensusAnalyserException.ExceptionType.UNABLE_TO_PARSE);
+         }
+         while (csvFileIterator.hasNext())
          {
             this.censusList.add(new IndiaCensusDAO(csvFileIterator.next()));
          }
@@ -38,14 +44,15 @@ public class CensusAnalyser
       }
       catch (IOException e)
       {
-         throw new CensusAnalyserException(e.getMessage(),
-               CensusAnalyserException.
-                     ExceptionType.
-                     CENSUS_FILE_PROBLEM);
+         throw new CensusAnalyserException(e.getMessage(), CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM);
+      }
+      catch (CSVBuilderException e)
+      {
+         throw new CensusAnalyserException(e.getMessage(), CensusAnalyserException.ExceptionType.UNABLE_TO_PARSE);
       }
    }
 
-   public int loadIndiaStateCode(String csvFilePath) throws CensusAnalyserException, CSVBuilderException
+   public int loadIndiaStateCode(String csvFilePath) throws CensusAnalyserException
    {
       try (Reader reader = Files.newBufferedReader(Paths.get(csvFilePath)))
       {
@@ -64,6 +71,13 @@ public class CensusAnalyser
       catch (CensusAnalyserException e)
       {
          throw new CensusAnalyserException(e.getMessage(), e.type.name());
+      }
+      catch (CSVBuilderException e)
+      {
+         throw new CensusAnalyserException(e.getMessage(),
+               CensusAnalyserException.
+                     ExceptionType.
+                     UNABLE_TO_PARSE);
       }
    }
 
