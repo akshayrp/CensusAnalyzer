@@ -8,7 +8,6 @@ import com.google.gson.Gson;
 
 import java.io.IOException;
 import java.io.Reader;
-import java.lang.reflect.InvocationTargetException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -42,6 +41,10 @@ public class CensusAnalyser
          }
          return this.censusList.size();
       }
+      catch (RuntimeException e)
+      {
+         throw new CensusAnalyserException(e.getMessage(),CensusAnalyserException.ExceptionType.UNABLE_TO_IDENTIFY_DELIMITER);
+      }
       catch (IOException e)
       {
          throw new CensusAnalyserException(e.getMessage(), CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM);
@@ -57,8 +60,7 @@ public class CensusAnalyser
       try (Reader reader = Files.newBufferedReader(Paths.get(csvFilePath)))
       {
          ICSVBuilder csvBuilder = CSVBuilderFactory.createCSVBuilder();
-         Iterator<IndiaStateCodeCSV> stateCodeCSVIterator = csvBuilder.
-               getCSVFileIterator(reader, IndiaStateCodeCSV.class);
+         Iterator<IndiaStateCodeCSV> stateCodeCSVIterator = csvBuilder.getCSVFileIterator(reader, IndiaStateCodeCSV.class);
          return getCount(stateCodeCSVIterator);
       }
       catch (IOException e)
@@ -89,8 +91,12 @@ public class CensusAnalyser
       return numberOfEntries;
    }
 
-   public String getStateWiseSortedCensusData()
+   public String getStateWiseSortedCensusData() throws CensusAnalyserException
    {
+      if (censusList.size() == 0 || censusList.equals(null))
+      {
+         throw new CensusAnalyserException("No Data to Read",CensusAnalyserException.ExceptionType.EMPTY_FILE);
+      }
       Comparator<IndiaCensusDAO> censusComparator = Comparator.comparing(census -> census.state);
       this.sort(censusComparator);
       String sortedStateCensusJson = new Gson().toJson(censusList);
