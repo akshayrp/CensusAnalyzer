@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="CSVBUILDER">
+    <output-path>$PROJECT_DIR$/out/artifacts/CSVBUILDER</output-path>
+    <root id="archive" name="CSVBUILDER.jar">
+      <element id="dir-copy" path="$PROJECT_DIR$/src/main/java/CSVBuilder" />
+      <element id="library" level="project" name="Gradle: com.opencsv:opencsv:4.0" />
+    </root>
+  </artifact>
+</component>
