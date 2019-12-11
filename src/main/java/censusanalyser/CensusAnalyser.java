@@ -4,7 +4,6 @@ import CSVBuilder.CSVBuilderException;
 import CSVBuilder.CSVBuilderFactory;
 import CSVBuilder.ICSVBuilder;
 import com.google.gson.Gson;
-
 import java.io.IOException;
 import java.io.Reader;
 import java.nio.file.Files;
@@ -94,15 +93,6 @@ public class CensusAnalyser
                      ExceptionType.
                      UNABLE_TO_PARSE);
       }
-
-   }
-
-   private <E> int getCount(Iterator<E> csvIterator)
-   {
-      Iterable<E> csvIterable = () -> csvIterator;
-      int numberOfEntries = (int) StreamSupport.stream
-            (csvIterable.spliterator(), false).count();
-      return numberOfEntries;
    }
 
    public String getStateWiseSortedCensusData() throws CensusAnalyserException
