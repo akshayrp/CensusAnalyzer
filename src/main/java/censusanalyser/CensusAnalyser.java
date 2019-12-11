@@ -1,10 +1,8 @@
 package censusanalyser;
-
 import CSVBuilder.CSVBuilderException;
 import CSVBuilder.CSVBuilderFactory;
 import CSVBuilder.ICSVBuilder;
 import com.google.gson.Gson;
-
 import java.io.IOException;
 import java.io.Reader;
 import java.nio.file.Files;
@@ -32,7 +30,6 @@ public class CensusAnalyser
          try
          {
             csvFileIterator = csvBuilder.getCSVFileIterator(reader, IndiaCensusCSV.class);
-
          }
          catch (RuntimeException e)
          {
@@ -73,9 +70,7 @@ public class CensusAnalyser
             DAOMerged.StateCode = stateCSV.StateCode;
          }
          return censusMap.size();
-
       }
-
       catch (IOException e)
       {
          throw new CensusAnalyserException(e.getMessage(),
