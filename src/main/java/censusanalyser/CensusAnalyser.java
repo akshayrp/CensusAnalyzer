@@ -42,11 +42,11 @@ public class CensusAnalyser
       }
       catch (CSVBuilderException e)
       {
-         throw new CensusAnalyserException(e.getMessage(), CensusAnalyserException.ExceptionType.UNABLE_TO_PARSE);
+         throw new CensusAnalyserException(e.getMessage(), CensusAnalyserException.ExceptionType.ERROR_IN_BUILDER);
       }
       catch (IOException e)
       {
-         throw new CensusAnalyserException(e.getMessage(), CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM);
+         throw new CensusAnalyserException(e.getMessage(), CensusAnalyserException.ExceptionType.CSV_FILE_PROBLEM);
       }
       catch (RuntimeException e)
       {
@@ -83,12 +83,12 @@ public class CensusAnalyser
          throw new CensusAnalyserException(e.getMessage(),
                CensusAnalyserException.
                      ExceptionType.
-                     UNABLE_TO_PARSE);
+                     ERROR_IN_BUILDER);
       }
       catch (IOException e)
       {
          throw new CensusAnalyserException(e.getMessage(), CensusAnalyserException.ExceptionType.
-               CENSUS_FILE_PROBLEM);
+               CSV_FILE_PROBLEM);
       }
       catch (CensusAnalyserException e)
       {
