@@ -105,7 +105,6 @@ public class CensusAnalyserTest
       }
    }
 
-
    @Test
    public void givenIndianCensusData_WhenSortedOnState_ShouldReturnSortedResult() throws CensusAnalyserException
    {
@@ -122,7 +121,6 @@ public class CensusAnalyserTest
       {
          e.printStackTrace();
       }
-
    }
 
    @Test
@@ -153,9 +151,7 @@ public class CensusAnalyserTest
          Assert.assertEquals(29, numberOfRecord);
       }
       catch (CensusAnalyserException e)
-      {
-
-      }
+      {}
    }
 
    @Test
@@ -173,6 +169,4 @@ public class CensusAnalyserTest
          Assert.assertEquals(CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM, e.type);
       }
    }
-
-
 }
