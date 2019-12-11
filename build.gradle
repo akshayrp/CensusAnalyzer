@@ -15,4 +15,7 @@ dependencies {
     testImplementation 'org.hamcrest:hamcrest-library:1.3'
     compile 'com.google.code.gson:gson:2.2.+'
     compile "com.opencsv:opencsv:4.0"
+    compile group: 'org.apache.commons', name: 'commons-csv', version: '1.4'
+    compile (files("/home/admin1/IdeaProjects/CensusAnalyser/CensusAnalyser/out/artifacts/Analyser/Analyser.jar"))
+
 }
