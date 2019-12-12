@@ -16,12 +16,10 @@ public class CensusAnalyser
    {
       this.censusMap = new HashMap<>();
    }
-
-   CensusLoader censusLoader = new CensusLoader();
-
    public int loadCensusData(Country country,String...csvFilePath) throws CensusAnalyserException
    {
-      censusMap = censusLoader.loadCensusData(country,csvFilePath);
+      CensusAdapter countryAdapter = CountryAdapterFactory.getCountryObject(country);
+     censusMap = countryAdapter.loadCensusData(csvFilePath);
       return censusMap.size();
    }
 
