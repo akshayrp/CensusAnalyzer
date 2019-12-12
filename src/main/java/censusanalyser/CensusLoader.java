@@ -3,6 +3,7 @@ package censusanalyser;
 import CSVBuilder.CSVBuilderException;
 import CSVBuilder.CSVBuilderFactory;
 import CSVBuilder.ICSVBuilder;
+
 import java.io.IOException;
 import java.io.Reader;
 import java.nio.file.Files;
@@ -15,8 +16,18 @@ import java.util.stream.StreamSupport;
 public class CensusLoader
 {
 
+   public Map<String, CensusDAO> loadCensusData(CensusAnalyser.Country country, String[] csvFilePath) throws CensusAnalyserException
+   {
+      if (country.equals(CensusAnalyser.Country.INDIA))
+         return loadCensusData(IndiaCensusCSV.class, csvFilePath);
+      else
+      {
+         return loadCensusData(USCensusCSV.class, csvFilePath);
+      }
+   }
 
-   public <E> Map<String, CensusDAO> loadCensusData(Class<E> censusCSVClass, String... csvFilePath) throws CensusAnalyserException
+
+   private <E> Map<String, CensusDAO> loadCensusData(Class<E> censusCSVClass, String... csvFilePath) throws CensusAnalyserException
    {
       Map<String, CensusDAO> censusMap = new HashMap<>();
       Iterator<E> csvFileIterator;
@@ -32,14 +43,14 @@ public class CensusLoader
             throw new CensusAnalyserException(e.getMessage(), CensusAnalyserException.ExceptionType.UNABLE_TO_PARSE);
          }
          Iterable<E> csvIterable = () -> csvFileIterator;
-         if(censusCSVClass.getName().equals("censusanalyser.IndiaCensusCSV"))
+         if (censusCSVClass.getName().equals("censusanalyser.IndiaCensusCSV"))
          {
             StreamSupport.stream
                   (csvIterable.spliterator(), false)
                   .map(IndiaCensusCSV.class::cast)
                   .forEach(censusCSV -> censusMap.put(censusCSV.state, new CensusDAO(censusCSV)));
          }
-         else if(censusCSVClass.getName().equals("censusanalyser.USCensusCSV"))
+         else if (censusCSVClass.getName().equals("censusanalyser.USCensusCSV"))
          {
             StreamSupport.stream
                   (csvIterable.spliterator(), false)
@@ -49,7 +60,7 @@ public class CensusLoader
 
          if (csvFilePath.length == 1)
             return censusMap;
-         loadIndiaStateCode(censusMap,csvFilePath[1]);
+         loadIndiaStateCode(censusMap, csvFilePath[1]);
          return censusMap;
       }
       catch (CSVBuilderException e)
@@ -102,4 +113,6 @@ public class CensusLoader
          throw new CensusAnalyserException(e.getMessage(), e.type.name());
       }
    }
+
+
 }

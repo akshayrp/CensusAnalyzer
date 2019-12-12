@@ -3,7 +3,7 @@ package censusanalyser;
 public class CensusAnalyserException extends Exception {
 
     enum ExceptionType {
-        CSV_FILE_PROBLEM,UNABLE_TO_PARSE, UNABLE_TO_IDENTIFY_DELIMITER, EMPTY_FILE, ERROR_IN_BUILDER
+        CSV_FILE_PROBLEM,UNABLE_TO_PARSE, UNABLE_TO_IDENTIFY_DELIMITER, EMPTY_FILE, ERROR_IN_BUILDER,WRONG_COUNTRY
     }
 
    public ExceptionType type;
