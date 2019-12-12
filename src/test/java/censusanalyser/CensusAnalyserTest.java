@@ -26,6 +26,7 @@ public class CensusAnalyserTest
    private static final String NO_FILE_PATH
          ="./src/test/resources/NoFile.csv";
 
+
    @Test
    public void givenIndianCensusCSVFileReturnsCorrectRecords()
    {
