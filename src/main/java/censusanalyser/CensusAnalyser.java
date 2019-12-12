@@ -68,14 +68,9 @@ public class CensusAnalyser
          {
             throw new CensusAnalyserException(e.getMessage(), CensusAnalyserException.ExceptionType.UNABLE_TO_PARSE);
          }
-         while (stateCodeCSVIterator.hasNext())
-         {
-            IndiaStateCodeCSV stateCSV = stateCodeCSVIterator.next();
-            IndiaCensusDAO DAOMerged = censusMap.get(stateCSV.StateName);
-            if (DAOMerged == null)
-               continue;
-            DAOMerged.StateCode = stateCSV.StateCode;
-         }
+         Iterable<IndiaStateCodeCSV> csvIterable = () -> stateCodeCSVIterator;
+         StreamSupport.stream(csvIterable.spliterator(),false).filter(csvState -> censusMap.get(csvState.StateName) != null)
+               .forEach(stateCSV -> censusMap.get(stateCSV.StateName).StateCode = stateCSV.StateCode);
          return censusMap.size();
       }
       catch (CSVBuilderException e)
