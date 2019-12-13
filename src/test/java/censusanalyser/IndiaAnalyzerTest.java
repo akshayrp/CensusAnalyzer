@@ -21,7 +21,7 @@ public class IndiaAnalyzerTest
    private static final String WRONG_DELIMITER_FILE_PATH
          = "./src/test/resources/StateCensusDataWrongDelimiter.csv";
    private static final String NO_HEADER_FILE_PATH
-         = "/home/admin1/IdeaProjects/CensusAnalyser/CensusAnalyser/src/test/resources/StateCensusDataWithoutHeader.csv";
+         = "./src/test/resources/StateCensusDataWithoutHeader.csv";
    private static final String NO_FILE_PATH
          = "./src/test/resources/NoFile.csv";
 
@@ -39,10 +39,7 @@ public class IndiaAnalyzerTest
       {
          Assert.assertEquals(29, keyMap.size());
       }
-
    }
-
-
    @Test
    public void givenStateCSVFile_WhenHeaderNotAvailable_ThrowsException()
    {
@@ -101,6 +98,36 @@ public class IndiaAnalyzerTest
       catch (CensusAnalyserException e)
       {
          Assert.assertEquals(CensusAnalyserException.ExceptionType.UNABLE_TO_PARSE, e.type);
+      }
+   }
+
+   @Test
+   public void givenIndianCensusCSVFile_WhenFileEmpty_ShouldThrowException()
+   {
+      try
+      {
+         ExpectedException exceptionRule = ExpectedException.none();
+         exceptionRule.expect(CensusAnalyserException.class);
+         adapter.loadCensusData(EMPTY_FILE_PATH);
+      }
+      catch (CensusAnalyserException e)
+      {
+         Assert.assertEquals(CensusAnalyserException.ExceptionType.UNABLE_TO_PARSE, e.type);
+      }
+   }
+
+   @Test
+   public void givenIndiaCensusCSVFile_WhenFileDoesNotExist_ShouldThrowException()
+   {
+      try
+      {
+         ExpectedException exceptionRule = ExpectedException.none();
+         exceptionRule.expect(CensusAnalyserException.class);
+         adapter.loadCensusData(NO_FILE_PATH);
+      }
+      catch (CensusAnalyserException e)
+      {
+         Assert.assertEquals(CensusAnalyserException.ExceptionType.CSV_FILE_PROBLEM, e.type);
       }
    }
 }
