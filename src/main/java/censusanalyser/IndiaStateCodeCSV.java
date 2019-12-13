@@ -4,6 +4,10 @@ import com.opencsv.bean.CsvBindByName;
 
 public class IndiaStateCodeCSV
 {
+   public IndiaStateCodeCSV()
+   {
+   }
+
    @CsvBindByName(column = "SrNo", required = true)
    public int SrNo;
 

@@ -5,6 +5,10 @@ import com.opencsv.bean.CsvBindByName;
 public class IndiaCensusCSV
 {
 
+   public IndiaCensusCSV()
+   {
+   }
+
    @CsvBindByName(column = "State", required = true)
    public String state;
 
@@ -16,5 +20,13 @@ public class IndiaCensusCSV
 
    @CsvBindByName(column = "DensityPerSqKm", required = true)
    public Double densityPerSqKm;
+
+   public IndiaCensusCSV(String state, int population, Double areaInSqKm, Double densityPerSqKm)
+   {
+      this.state = state;
+      this.population = population;
+      this.areaInSqKm = areaInSqKm;
+      this.densityPerSqKm = densityPerSqKm;
+   }
 }
 

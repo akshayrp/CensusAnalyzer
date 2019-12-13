@@ -18,6 +18,8 @@ public class USAdapterTest
          = "./src/test/resources/USCensusDataWithoutHeader.csv";
    private static final String NO_FILE_PATH
          = "./src/test/resources/NoFile.csv";
+   private static final String WRONG_FILE_TYPE
+         = "./src/test/resources/USCensusData.txt";
 
    CensusAdapter adapter = new IndiaCensusAdapter();
    Map<String,CensusDAO> usMap = null;
@@ -46,7 +48,7 @@ public class USAdapterTest
       }
       catch (CensusAnalyserException e)
       {
-         Assert.assertEquals(CensusAnalyserException.ExceptionType.UNABLE_TO_PARSE, e.type);
+         Assert.assertEquals(CensusAnalyserException.ExceptionType.CSV_FILE_PROBLEM, e.type);
       }
    }
 
@@ -77,10 +79,8 @@ public class USAdapterTest
       }
       catch (CensusAnalyserException e)
       {
-         e.printStackTrace();
          Assert.assertEquals(CensusAnalyserException.ExceptionType.UNABLE_TO_PARSE, e.type);
       }
-      Assert.assertEquals(51,usMap.size());
    }
 
    @Test
@@ -94,7 +94,22 @@ public class USAdapterTest
       }
       catch (CensusAnalyserException e)
       {
-         Assert.assertEquals(CensusAnalyserException.ExceptionType.UNABLE_TO_PARSE, e.type);
+         Assert.assertEquals(CensusAnalyserException.ExceptionType.CSV_FILE_PROBLEM, e.type);
+      }
+   }
+
+   @Test
+   public void givenUSCensusData_WhenFileExtensionWrong_ShouldThrowException()
+   {
+      try
+      {
+         ExpectedException exceptionRule = ExpectedException.none();
+         exceptionRule.expect(CensusAnalyserException.class);
+         adapter.loadCensusData(WRONG_FILE_TYPE);
+      }
+      catch (CensusAnalyserException e)
+      {
+         Assert.assertEquals(CensusAnalyserException.ExceptionType.CSV_FILE_PROBLEM, e.type);
       }
    }
 }

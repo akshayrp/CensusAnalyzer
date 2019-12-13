@@ -15,18 +15,21 @@ import java.util.stream.StreamSupport;
 public class IndiaCensusAdapter extends CensusAdapter
 {
 
-   Map<String, CensusDAO> IndiaCensusMap = new HashMap<>();
+   public IndiaCensusAdapter()
+   {
+   }
+
+   Map<String, CensusDAO> CensusMap = new HashMap<>();
 
    @Override
    public Map<String, CensusDAO> loadCensusData(String... csvFilePath) throws CensusAnalyserException
    {
-      IndiaCensusMap = super.loadCensusData(IndiaCensusCSV.class, csvFilePath);
-      if(csvFilePath.length>1)
-         this.loadIndiaStateCode(csvFilePath[1]);
-      return IndiaCensusMap;
+      CensusMap = super.loadCensusData(IndiaCensusCSV.class, csvFilePath);
+      this.loadIndiaStateCode(csvFilePath[1]);
+      return CensusMap;
    }
 
-   private int loadIndiaStateCode(String csvFilePath) throws CensusAnalyserException
+   private Map<String, CensusDAO> loadIndiaStateCode(String csvFilePath) throws CensusAnalyserException
    {
       Iterator<IndiaStateCodeCSV> stateCodeCSVIterator;
       try (Reader reader = Files.newBufferedReader(Paths.get(csvFilePath)))
@@ -41,9 +44,9 @@ public class IndiaCensusAdapter extends CensusAdapter
             throw new CensusAnalyserException(e.getMessage(), CensusAnalyserException.ExceptionType.UNABLE_TO_PARSE);
          }
          Iterable<IndiaStateCodeCSV> csvIterable = () -> stateCodeCSVIterator;
-         StreamSupport.stream(csvIterable.spliterator(), false).filter(csvState -> IndiaCensusMap.get(csvState.StateName) != null)
-               .forEach(stateCSV -> IndiaCensusMap.get(stateCSV.StateName).stateCode = stateCSV.StateCode);
-         return IndiaCensusMap.size();
+         StreamSupport.stream(csvIterable.spliterator(), false).filter(csvState -> CensusMap.get(csvState.StateName) != null)
+               .forEach(stateCSV -> CensusMap.get(stateCSV.StateName).stateCode = stateCSV.StateCode);
+         return CensusMap;
       }
       catch (CSVBuilderException e)
       {
