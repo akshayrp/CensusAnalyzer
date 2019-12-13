@@ -17,6 +17,7 @@ public class IndiaCensusAdapter extends CensusAdapter
 
    public IndiaCensusAdapter()
    {
+
    }
 
    Map<String, CensusDAO> CensusMap = new HashMap<>();

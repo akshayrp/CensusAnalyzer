@@ -79,7 +79,7 @@ public class USAdapterTest
       }
       catch (CensusAnalyserException e)
       {
-         Assert.assertEquals(CensusAnalyserException.ExceptionType.UNABLE_TO_PARSE, e.type);
+         Assert.assertEquals(CensusAnalyserException.ExceptionType.UNABLE_TO_IDENTIFY_DELIMITER, e.type);
       }
    }
 

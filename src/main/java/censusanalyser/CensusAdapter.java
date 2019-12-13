@@ -28,14 +28,7 @@ public abstract class CensusAdapter
       try (Reader reader = Files.newBufferedReader(Paths.get(csvFilePath[0])))
       {
          ICSVBuilder csvBuilder = CSVBuilderFactory.createCSVBuilder();
-         try
-         {
-            csvFileIterator = csvBuilder.getCSVFileIterator(reader, censusCSVClass);
-         }
-         catch (RuntimeException e)
-         {
-            throw new CensusAnalyserException(e.getMessage(), CensusAnalyserException.ExceptionType.UNABLE_TO_PARSE);
-         }
+         csvFileIterator = csvBuilder.getCSVFileIterator(reader, censusCSVClass);
          Iterable<E> csvIterable = () -> csvFileIterator;
          if (censusCSVClass.getName().equals("censusanalyser.IndiaCensusCSV"))
          {

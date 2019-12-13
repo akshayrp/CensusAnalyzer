@@ -43,7 +43,7 @@ public class CensusAnalyserTest
       }
       catch (CensusAnalyserException e)
       {
-         Assert.assertEquals(CensusAnalyserException.ExceptionType.UNABLE_TO_PARSE, e.type);
+         Assert.assertEquals(CensusAnalyserException.ExceptionType.UNABLE_TO_IDENTIFY_DELIMITER, e.type);
       }
    }
 
@@ -59,7 +59,7 @@ public class CensusAnalyserTest
       }
       catch (CensusAnalyserException e)
       {
-         Assert.assertEquals(CensusAnalyserException.ExceptionType.UNABLE_TO_PARSE, e.type);
+         Assert.assertEquals(CensusAnalyserException.ExceptionType.UNABLE_TO_IDENTIFY_DELIMITER, e.type);
       }
    }
 
@@ -296,6 +296,21 @@ public class CensusAnalyserTest
          CensusAnalyser censusAnalyser = new CensusAnalyser();
          Map<String,CensusDAO> map = censusAnalyser.loadCensusData(CensusAnalyser.Country.USA, US_CENSUS_FILE_PATH);
          String sortedCensusData = censusAnalyser.sortData(CountryFields.POPULATION_DENSITY);
+         USCensusCSV[] censusCSV = new Gson().fromJson(sortedCensusData, USCensusCSV[].class);
+         Assert.assertEquals("District of Columbia", censusCSV[0].state);
+      }
+      catch (CensusAnalyserException e)
+      { }
+   }
+
+   @Test
+   public void givenUSCensusData_WhenSortedOnPopulationAndDensity_ShouldReturnsSortedData()
+   {
+      try
+      {
+         CensusAnalyser censusAnalyser = new CensusAnalyser();
+         Map<String,CensusDAO> map = censusAnalyser.loadCensusData(CensusAnalyser.Country.USA, US_CENSUS_FILE_PATH);
+         String sortedCensusData = censusAnalyser.sortByPopulationAndDensity(CountryFields.POPULATION_AND_DENSITY);
          USCensusCSV[] censusCSV = new Gson().fromJson(sortedCensusData, USCensusCSV[].class);
          Assert.assertEquals("District of Columbia", censusCSV[0].state);
       }
