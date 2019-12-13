@@ -20,9 +20,10 @@ public abstract class CensusAdapter
    }
 
    Map<String, CensusDAO> censusMap = new HashMap<>();
+
    public abstract Map<String, CensusDAO> loadCensusData(String... csvFilePath) throws CensusAnalyserException;
 
-   public <E> Map<String, CensusDAO> loadCensusData(Class<E> censusCSVClass, String...csvFilePath) throws CensusAnalyserException
+   public <E> Map<String, CensusDAO> loadCensusData(Class<E> censusCSVClass, String... csvFilePath) throws CensusAnalyserException
    {
       Iterator<E> csvFileIterator;
       try (Reader reader = Files.newBufferedReader(Paths.get(csvFilePath[0])))
