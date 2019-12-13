@@ -14,14 +14,12 @@ public class IndiaAnalyzerTest
          = "./src/main/resources/IndiaStateCensusData.csv";
    private static final String INDIA_CODE_CSV_FILE_PATH
          = "./src/test/resources/IndiaStateCode.csv";
-   private static final String WRONG_CODE_CSV_FILE_PATH
-         = "./src/test/resources/IndiaStateCode.csv";
    private static final String EMPTY_FILE_PATH
          = "./src/test/resources/empty.csv";
    private static final String WRONG_DELIMITER_FILE_PATH
          = "./src/test/resources/StateCensusDataWrongDelimiter.csv";
    private static final String NO_HEADER_FILE_PATH
-         = "/home/admin1/IdeaProjects/CensusAnalyser/CensusAnalyser/src/test/resources/StateCensusDataWithoutHeader.csv";
+         = "./src/test/resources/StateCensusDataWithoutHeader.csv";
    private static final String NO_FILE_PATH
          = "./src/test/resources/NoFile.csv";
 
@@ -34,12 +32,10 @@ public class IndiaAnalyzerTest
       try
       {
          keyMap = adapter.loadCensusData(INDIA_CENSUS_CSV_FILE_PATH, INDIA_CODE_CSV_FILE_PATH);
-      }
-      catch (CensusAnalyserException e)
-      {
          Assert.assertEquals(29, keyMap.size());
       }
-
+      catch (CensusAnalyserException e)
+      { }
    }
 
 
@@ -101,6 +97,37 @@ public class IndiaAnalyzerTest
       catch (CensusAnalyserException e)
       {
          Assert.assertEquals(CensusAnalyserException.ExceptionType.UNABLE_TO_PARSE, e.type);
+      }
+   }
+
+
+   @Test
+   public void givenIndianCensusCSVFile_WhenFileEmpty_ShouldThrowException()
+   {
+      try
+      {
+         ExpectedException exceptionRule = ExpectedException.none();
+         exceptionRule.expect(CensusAnalyserException.class);
+         adapter.loadCensusData(EMPTY_FILE_PATH);
+      }
+      catch (CensusAnalyserException e)
+      {
+         Assert.assertEquals(CensusAnalyserException.ExceptionType.UNABLE_TO_PARSE, e.type);
+      }
+   }
+
+   @Test
+   public void givenIndiaCensusCSVFile_WhenFileDoesNotExist_ShouldThrowException()
+   {
+      try
+      {
+         ExpectedException exceptionRule = ExpectedException.none();
+         exceptionRule.expect(CensusAnalyserException.class);
+         adapter.loadCensusData(NO_FILE_PATH);
+      }
+      catch (CensusAnalyserException e)
+      {
+         Assert.assertEquals(CensusAnalyserException.ExceptionType.CSV_FILE_PROBLEM, e.type);
       }
    }
 }

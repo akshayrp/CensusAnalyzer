@@ -30,66 +30,6 @@ public class CensusAnalyserTest
 
 
    @Test
-   public void givenIndianCensusCSVFile_WhenFileEmpty_ShouldThrowException()
-   {
-      try
-      {
-         ExpectedException exceptionRule = ExpectedException.none();
-         exceptionRule.expect(CensusAnalyserException.class);
-         censusAnalyser.loadCensusData(CensusAnalyser.Country.INDIA,EMPTY_FILE_PATH);
-      }
-      catch (CensusAnalyserException e)
-      {
-         Assert.assertEquals(CensusAnalyserException.ExceptionType.UNABLE_TO_PARSE, e.type);
-      }
-   }
-
-   @Test
-   public void givenStateCSVFile_WhenHeaderNotAvailable_ThrowsException()
-   {
-      try
-      {
-         ExpectedException exceptionRule = ExpectedException.none();
-         exceptionRule.expect(CensusAnalyserException.class);
-         censusAnalyser.loadCensusData(CensusAnalyser.Country.INDIA,NO_HEADER_FILE_PATH);
-      }
-      catch (CensusAnalyserException e)
-      {
-         Assert.assertEquals(CensusAnalyserException.ExceptionType.UNABLE_TO_PARSE, e.type);
-      }
-   }
-
-   @Test
-   public void givenStateDataCSVFile_WhenDelimiterIncorrect_ThrowsException()
-   {
-      try
-      {
-         ExpectedException exceptionRule = ExpectedException.none();
-         exceptionRule.expect(CensusAnalyserException.class);
-         censusAnalyser.loadCensusData(CensusAnalyser.Country.INDIA,WRONG_DELIMITER_FILE_PATH);
-      }
-      catch (CensusAnalyserException e)
-      {
-         Assert.assertEquals(CensusAnalyserException.ExceptionType.UNABLE_TO_IDENTIFY_DELIMITER, e.type);
-      }
-   }
-
-   @Test
-   public void givenIndiaCensusData_WithWrongFile_ShouldThrowException()
-   {
-      try
-      {
-         ExpectedException exceptionRule = ExpectedException.none();
-         exceptionRule.expect(CensusAnalyserException.class);
-         censusAnalyser.loadCensusData(CensusAnalyser.Country.INDIA,WRONG_CENSUS_CSV_FILE_PATH);
-      }
-      catch (CensusAnalyserException e)
-      {
-         Assert.assertEquals(CensusAnalyserException.ExceptionType.CSV_FILE_PROBLEM, e.type);
-      }
-   }
-
-   @Test
    public void givenIndianCensusData_WhenSortedOnState_ShouldReturnSortedResult()
    {
       try
