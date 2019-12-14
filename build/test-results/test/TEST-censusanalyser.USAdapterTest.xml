@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="censusanalyser.USAdapterTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2019-12-14T03:59:14" hostname="admin1-desktop" time="0.102">
+  <properties/>
+  <testcase name="givenUsCensusData_WhenFileDoesNotHaveHeader_ShouldThrowException" classname="censusanalyser.USAdapterTest" time="0.009"/>
+  <testcase name="givenUsCensusData_WhenFileIsEmpty_ShouldThrowException" classname="censusanalyser.USAdapterTest" time="0.078"/>
+  <testcase name="GivenUSCensusData_ShouldReturnExactCountOfRecords" classname="censusanalyser.USAdapterTest" time="0.013"/>
+  <testcase name="givenUsCensusData_WhenDelimiterNotAvailable_ShouldThrowException" classname="censusanalyser.USAdapterTest" time="0.0"/>
+  <testcase name="givenUsCensusData_WhenFileDoesNotExist_ShouldThrowException" classname="censusanalyser.USAdapterTest" time="0.0"/>
+  <testcase name="givenUSCensusData_WhenFileExtensionWrong_ShouldThrowException" classname="censusanalyser.USAdapterTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

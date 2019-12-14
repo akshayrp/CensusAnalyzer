@@ -9,6 +9,7 @@
     <list default="true" id="9c80ee4f-b49f-4760-94c9-81f9af2ef2aa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileContent/fileContent.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
@@ -17,21 +18,21 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/CSVBUILDER.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/censusanalyser/CensusAnalyser.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/censusanalyser/CensusAnalyser.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/censusanalyser/CensusAnalyserException$ExceptionType.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/censusanalyser/CensusAnalyserException$ExceptionType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/censusanalyser/CensusAnalyserException.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/censusanalyser/CensusAnalyserException.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/censusanalyser/IndiaCensusCSV.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/censusanalyser/IndiaCensusCSV.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/censusanalyser/IndiaCensusDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/censusanalyser/IndiaStateCodeCSV.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/censusanalyser/IndiaStateCodeCSV.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/censusanalyser/CensusAnalyserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/censusanalyser/CensusAnalyserTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/censusanalyser.CensusAnalyserTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/censusanalyser.CensusAnalyserTest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/censusanalyser.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/censusanalyser.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/test/IndiaStateCode.csv" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/test/IndiaStateCode.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-censusanalyser.CensusAnalyserTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-censusanalyser.CensusAnalyserTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/test/IndiaStateCensusData.csv" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/test/IndiaStateCensusData.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/test/USCensusData.csv" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/test/USCensusData.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/censusanalyser/CensusAnalyser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/censusanalyser/CensusAnalyser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/censusanalyser/CensusAnalyserException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/censusanalyser/CensusAnalyserException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/censusanalyser/CountryAdapterFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/censusanalyser/CountryAdapterFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/censusanalyser/IndiaCensusAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/censusanalyser/IndiaCensusAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/censusanalyser/USCensusCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/censusanalyser/USCensusCSV.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +40,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="163" />
+    <option name="myElementSize" value="178" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -61,6 +62,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -91,26 +93,7 @@
       <recent name="$PROJECT_DIR$/src/test/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.CensusAnalyser [dependencies]">
-    <configuration name="CensusAnalyser [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="dependencies" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Gradle.USAdapterTest">
     <configuration name="CensusAnalyserTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -131,12 +114,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CensusAnalyserTest.givenIndianCensusCSV_WhenNotLoadedAndTriedToSort_ShouldThrowException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CensusAnalyserTest.givenIndiaCensusData_WhenSortedOnPopulationAndDensity_ShouldReturnsSortedData" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;censusanalyser.CensusAnalyserTest.givenIndianCensusCSV_WhenNotLoadedAndTriedToSort_ShouldThrowException&quot;" />
+        <option name="scriptParameters" value="--tests &quot;censusanalyser.CensusAnalyserTest.givenIndiaCensusData_WhenSortedOnPopulationAndDensity_ShouldReturnsSortedData&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -151,12 +134,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CensusAnalyserTest.givenIndianCensusData_WhenSortedOnState_ShouldReturnSortedResult" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CensusAnalyserTest.givenUSCensusData_WhenSortedOnPopulationAndDensity_ShouldReturnsSortedData" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;censusanalyser.CensusAnalyserTest.givenIndianCensusData_WhenSortedOnState_ShouldReturnSortedResult&quot;" />
+        <option name="scriptParameters" value="--tests &quot;censusanalyser.CensusAnalyserTest.givenUSCensusData_WhenSortedOnPopulationAndDensity_ShouldReturnsSortedData&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -171,12 +154,32 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CensusAnalyserTest.givenIndianStateCodeCsv_ShouldReturnExactCount" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="IndiaAnalyzerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;censusanalyser.CensusAnalyserTest.givenIndianStateCodeCsv_ShouldReturnExactCount&quot;" />
+        <option name="scriptParameters" value="--tests &quot;censusanalyser.IndiaAnalyzerTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="USAdapterTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;censusanalyser.USAdapterTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -201,11 +204,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.CensusAnalyser [dependencies]" />
+        <item itemvalue="Gradle.USAdapterTest" />
+        <item itemvalue="Gradle.IndiaAnalyzerTest" />
         <item itemvalue="Gradle.CensusAnalyserTest" />
-        <item itemvalue="Gradle.CensusAnalyserTest.givenIndianCensusData_WhenSortedOnState_ShouldReturnSortedResult" />
-        <item itemvalue="Gradle.CensusAnalyserTest.givenIndianStateCodeCsv_ShouldReturnExactCount" />
-        <item itemvalue="Gradle.CensusAnalyserTest.givenIndianCensusCSV_WhenNotLoadedAndTriedToSort_ShouldThrowException" />
+        <item itemvalue="Gradle.CensusAnalyserTest.givenIndiaCensusData_WhenSortedOnPopulationAndDensity_ShouldReturnsSortedData" />
+        <item itemvalue="Gradle.CensusAnalyserTest.givenUSCensusData_WhenSortedOnPopulationAndDensity_ShouldReturnsSortedData" />
       </list>
     </recent_temporary>
   </component>
@@ -243,10 +246,10 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="311" y="58" width="847" height="677" key="#Project_Structure/67.27.1299.741@67.27.1299.741" timestamp="1575971615850" />
-    <state x="524" y="115" width="544" height="562" key="#com.intellij.ide.util.MemberChooser" timestamp="1576046763015">
+    <state x="524" y="115" width="544" height="562" key="#com.intellij.ide.util.MemberChooser" timestamp="1576233498815">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="524" y="115" width="544" height="562" key="#com.intellij.ide.util.MemberChooser/67.27.1299.741@67.27.1299.741" timestamp="1576046763015" />
+    <state x="524" y="115" width="544" height="562" key="#com.intellij.ide.util.MemberChooser/67.27.1299.741@67.27.1299.741" timestamp="1576233498815" />
     <state x="356" y="183" width="525" height="428" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1575951579356">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
@@ -263,42 +266,46 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="390" y="243" width="643" height="306" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/67.27.1299.741@67.27.1299.741" timestamp="1575886413083" />
+    <state width="477" height="455" key="DebuggerActiveHint" timestamp="1576234042530">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="477" height="455" key="DebuggerActiveHint/67.27.1299.741@67.27.1299.741" timestamp="1576234042530" />
     <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1575958821341">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl/67.27.1299.741@67.27.1299.741" timestamp="1575958821341" />
-    <state width="1253" height="175" key="GridCell.Tab.0.bottom" timestamp="1576053141325">
+    <state width="1253" height="136" key="GridCell.Tab.0.bottom" timestamp="1576295968652">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="175" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1576053141325" />
-    <state width="1253" height="175" key="GridCell.Tab.0.center" timestamp="1576053141325">
+    <state width="1253" height="136" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1576295968652" />
+    <state width="1253" height="136" key="GridCell.Tab.0.center" timestamp="1576295968652">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="175" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1576053141325" />
-    <state width="1253" height="175" key="GridCell.Tab.0.left" timestamp="1576053141323">
+    <state width="1253" height="136" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1576295968652" />
+    <state width="1253" height="136" key="GridCell.Tab.0.left" timestamp="1576295968652">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="175" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1576053141323" />
-    <state width="1253" height="175" key="GridCell.Tab.0.right" timestamp="1576053141325">
+    <state width="1253" height="136" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1576295968652" />
+    <state width="1253" height="136" key="GridCell.Tab.0.right" timestamp="1576295968652">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="175" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1576053141325" />
-    <state width="1253" height="219" key="GridCell.Tab.1.bottom" timestamp="1576048098009">
+    <state width="1253" height="136" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1576295968652" />
+    <state width="1253" height="143" key="GridCell.Tab.1.bottom" timestamp="1576242596822">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="219" key="GridCell.Tab.1.bottom/67.27.1299.741@67.27.1299.741" timestamp="1576048098009" />
-    <state width="1253" height="219" key="GridCell.Tab.1.center" timestamp="1576048098009">
+    <state width="1253" height="143" key="GridCell.Tab.1.bottom/67.27.1299.741@67.27.1299.741" timestamp="1576242596822" />
+    <state width="1253" height="143" key="GridCell.Tab.1.center" timestamp="1576242596821">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="219" key="GridCell.Tab.1.center/67.27.1299.741@67.27.1299.741" timestamp="1576048098009" />
-    <state width="1253" height="219" key="GridCell.Tab.1.left" timestamp="1576048098009">
+    <state width="1253" height="143" key="GridCell.Tab.1.center/67.27.1299.741@67.27.1299.741" timestamp="1576242596821" />
+    <state width="1253" height="143" key="GridCell.Tab.1.left" timestamp="1576242596821">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="219" key="GridCell.Tab.1.left/67.27.1299.741@67.27.1299.741" timestamp="1576048098009" />
-    <state width="1253" height="219" key="GridCell.Tab.1.right" timestamp="1576048098009">
+    <state width="1253" height="143" key="GridCell.Tab.1.left/67.27.1299.741@67.27.1299.741" timestamp="1576242596821" />
+    <state width="1253" height="143" key="GridCell.Tab.1.right" timestamp="1576242596821">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="219" key="GridCell.Tab.1.right/67.27.1299.741@67.27.1299.741" timestamp="1576048098009" />
+    <state width="1253" height="143" key="GridCell.Tab.1.right/67.27.1299.741@67.27.1299.741" timestamp="1576242596821" />
     <state x="208" y="27" width="1024" height="741" key="SettingsEditor" timestamp="1576036555071">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
@@ -307,30 +314,63 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state width="498" height="446" key="SwitcherDM/67.27.1299.741@67.27.1299.741" timestamp="1575873285754" />
+    <state width="649" height="371" key="XDebugger.FullValuePopup" timestamp="1576240475001">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="649" height="371" key="XDebugger.FullValuePopup/67.27.1299.741@67.27.1299.741" timestamp="1576240475001" />
     <state x="67" y="27" width="1289" height="741" key="new project wizard" timestamp="1575955312171">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="67" y="27" width="1289" height="741" key="new project wizard/67.27.1299.741@67.27.1299.741" timestamp="1575955312171" />
-    <state x="379" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1576047862911">
+    <state x="412" y="27" width="598" height="741" key="refactoring.ChangeSignatureDialog" timestamp="1576233172568">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="379" y="89" width="672" height="678" key="search.everywhere.popup/67.27.1299.741@67.27.1299.741" timestamp="1576047862911" />
+    <state x="412" y="27" width="598" height="741" key="refactoring.ChangeSignatureDialog/67.27.1299.741@67.27.1299.741" timestamp="1576233172568" />
+    <state x="379" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1576229209653">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="379" y="89" width="672" height="678" key="search.everywhere.popup/67.27.1299.741@67.27.1299.741" timestamp="1576229209653" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/censusanalyser/CensusAnalyserTest.java</url>
-          <line>145</line>
-          <properties class="censusanalyser.CensusAnalyserTest" method="givenIndianStateCodeCsv_ShouldReturnExactCount">
+          <line>114</line>
+          <properties class="censusanalyser.CensusAnalyserTest" method="givenIndiaCensusData_WhenSortedOnPopulation_ShouldReturnsSortedData">
             <option name="EMULATED" value="true" />
           </properties>
-          <option name="timeStamp" value="40" />
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/censusanalyser/CensusAnalyserTest.java</url>
+          <line>314</line>
+          <properties class="censusanalyser.CensusAnalyserTest" method="givenUSCensusData_WhenSortedOnPopulationAndDensity_ShouldReturnsSortedData">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/censusanalyser/CensusAnalyserTest.java</url>
+          <line>330</line>
+          <properties class="censusanalyser.CensusAnalyserTest" method="givenIndiaCensusData_WhenSortedOnPopulationAndDensity_ShouldReturnsSortedData">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="72" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/censusanalyser/CensusAnalyserTest.java</url>
+          <line>115</line>
+          <option name="timeStamp" value="70" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/CensusAnalyser$CensusAnalyserTest.ic" NAME="CensusAnalyserTest Coverage Results" MODIFIED="1576052271222" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/CensusAnalyser$CensusAnalyserTest.ic" NAME="CensusAnalyserTest Coverage Results" MODIFIED="1576295933278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/CensusAnalyser$USAdapterTest.ic" NAME="USAdapterTest Coverage Results" MODIFIED="1576295952937" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/CensusAnalyser$CensusAnalyserTest_givenIndiaCensusData_WhenSortedOnPopulation_ShouldReturnsSortedData.ic" NAME="CensusAnalyserTest.givenIndiaCensusData_WhenSortedOnPopulation_ShouldReturnsSortedData Coverage Results" MODIFIED="1576235674810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/CensusAnalyser$IndiaAnalyzerTest.ic" NAME="IndiaAnalyzerTest Coverage Results" MODIFIED="1576295943852" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/CensusAnalyser$USAdapterTest_givenUsCensusData_WhenFileIsEmpty_ShouldThrowException.ic" NAME="USAdapterTest.givenUsCensusData_WhenFileIsEmpty_ShouldThrowException Coverage Results" MODIFIED="1576228423660" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
