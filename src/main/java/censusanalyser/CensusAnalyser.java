@@ -44,7 +44,6 @@ public class CensusAnalyser
       {
          throw new CensusAnalyserException("No Data to Read", CensusAnalyserException.ExceptionType.EMPTY_FILE);
       }
-
       ArrayList arrayList = censusMap.values().stream()
             .sorted(this.sortBy.get(fields))
             .map(censusDAO -> censusDAO.getCensusDTO(this.country))

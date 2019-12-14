@@ -20,14 +20,14 @@ public class IndiaCensusAdapter extends CensusAdapter
 
    }
 
-   Map<String, CensusDAO> CensusMap = new HashMap<>();
+   Map<String, CensusDAO> censusMap = new HashMap<>();
 
    @Override
    public Map<String, CensusDAO> loadCensusData(String... csvFilePath) throws CensusAnalyserException
    {
-      CensusMap = super.loadCensusData(IndiaCensusCSV.class, csvFilePath);
+      censusMap = super.loadCensusData(IndiaCensusCSV.class, csvFilePath);
       this.loadIndiaStateCode(csvFilePath[1]);
-      return CensusMap;
+      return censusMap;
    }
 
    private Map<String, CensusDAO> loadIndiaStateCode(String csvFilePath) throws CensusAnalyserException
@@ -45,9 +45,9 @@ public class IndiaCensusAdapter extends CensusAdapter
             throw new CensusAnalyserException(e.getMessage(), CensusAnalyserException.ExceptionType.UNABLE_TO_PARSE);
          }
          Iterable<IndiaStateCodeCSV> csvIterable = () -> stateCodeCSVIterator;
-         StreamSupport.stream(csvIterable.spliterator(), false).filter(csvState -> CensusMap.get(csvState.StateName) != null)
-               .forEach(stateCSV -> CensusMap.get(stateCSV.StateName).stateCode = stateCSV.StateCode);
-         return CensusMap;
+         StreamSupport.stream(csvIterable.spliterator(), false).filter(csvState -> censusMap.get(csvState.StateName) != null)
+               .forEach(stateCSV -> censusMap.get(stateCSV.StateName).stateCode = stateCSV.StateCode);
+         return censusMap;
       }
       catch (CSVBuilderException e)
       {
