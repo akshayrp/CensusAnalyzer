@@ -120,7 +120,7 @@ public class CensusAnalyserTest
          censusAnalyser.loadCensusData(CensusAnalyser.Country.INDIA, INDIA_CENSUS_CSV_FILE_PATH, INDIA_CODE_CSV_FILE_PATH);
          String sortedCensusData = censusAnalyser.sortData(CountryFields.POPULATION);
          IndiaCensusCSV[] censusCSV = new Gson().fromJson(sortedCensusData, IndiaCensusCSV[].class);
-         Assert.assertEquals("Uttar Pradesh", censusCSV[0].state);
+         Assert.assertEquals("Assam", censusCSV[0].state);
       }
       catch (CensusAnalyserException e)
       {
