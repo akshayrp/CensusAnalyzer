@@ -16,19 +16,8 @@
       <change afterPath="$PROJECT_DIR$/build/classes/java/main/censusanalyser/IndiaCensusAdapter.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/build/classes/java/main/censusanalyser/USCensusAdapter.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/build/classes/java/main/censusanalyser/USCensusCSV.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/test/censusanalyser/IndiaAnalyzerTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/test/censusanalyser/USAdapterTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/censusanalyser.USAdapterTest.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/css/base-style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/censusanalyser.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/build/resources/test/USCensusDataWithWrongDelimiter.csv" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/build/resources/test/USCensusDataWithoutHeader.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/test-results/test/TEST-censusanalyser.USAdapterTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/censusanalyser/CountryFields.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
@@ -45,12 +34,14 @@
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/censusanalyser/CensusAnalyser.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/censusanalyser/CensusAnalyser.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/censusanalyser/CensusAnalyserException$ExceptionType.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/censusanalyser/CensusAnalyserException$ExceptionType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/censusanalyser/CensusAnalyserException.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/censusanalyser/CensusAnalyserException.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/censusanalyser/IndiaCensusCSV.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/censusanalyser/IndiaCensusCSV.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/censusanalyser/IndiaCensusDAO.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/censusanalyser/IndiaStateCodeCSV.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/censusanalyser/IndiaStateCodeCSV.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/censusanalyser/CensusAnalyserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/censusanalyser/CensusAnalyserTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/censusanalyser/CensusAnalyserTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/test/IndiaStateCensusData.csv" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/test/IndiaStateCensusData.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/test/USCensusData.csv" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/test/USCensusData.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/censusanalyser/CensusAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/censusanalyser/CensusAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/censusanalyser/CensusAnalyser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/censusanalyser/CensusAnalyser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/censusanalyser/CensusAnalyserException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/censusanalyser/CensusAnalyserException.java" afterDir="false" />
@@ -307,22 +298,22 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl/67.27.1299.741@67.27.1299.741" timestamp="1575958821341" />
-    <state width="1253" height="136" key="GridCell.Tab.0.bottom" timestamp="1576297753939">
+    <state width="1253" height="136" key="GridCell.Tab.0.bottom" timestamp="1576297765511">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="136" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1576297753939" />
-    <state width="1253" height="136" key="GridCell.Tab.0.center" timestamp="1576297753939">
+    <state width="1253" height="136" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1576297765511" />
+    <state width="1253" height="136" key="GridCell.Tab.0.center" timestamp="1576297765510">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="136" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1576297753939" />
-    <state width="1253" height="136" key="GridCell.Tab.0.left" timestamp="1576297753939">
+    <state width="1253" height="136" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1576297765510" />
+    <state width="1253" height="136" key="GridCell.Tab.0.left" timestamp="1576297765510">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="136" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1576297753939" />
-    <state width="1253" height="136" key="GridCell.Tab.0.right" timestamp="1576297753939">
+    <state width="1253" height="136" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1576297765510" />
+    <state width="1253" height="136" key="GridCell.Tab.0.right" timestamp="1576297765511">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="136" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1576297753939" />
+    <state width="1253" height="136" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1576297765511" />
     <state width="1253" height="143" key="GridCell.Tab.1.bottom" timestamp="1576242596822">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
@@ -369,15 +360,15 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/censusanalyser/CensusAnalyserTest.java</url>
-          <line>106</line>
-          <properties class="censusanalyser.CensusAnalyserTest" method="givenIndiaCensusData_WhenSortedOnPopulation_ShouldReturnsSortedData">
+          <line>119</line>
+          <properties class="censusanalyser.CensusAnalyserTest">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="67" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/censusanalyser/CensusAnalyserTest.java</url>
-          <line>107</line>
+          <line>161</line>
           <option name="timeStamp" value="70" />
         </line-breakpoint>
       </breakpoints>
