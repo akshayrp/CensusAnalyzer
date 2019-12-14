@@ -35,9 +35,9 @@ public class IndiaAnalyzerTest
          Assert.assertEquals(29, keyMap.size());
       }
       catch (CensusAnalyserException e)
-      { }
+      {
+      }
    }
-
 
    @Test
    public void givenStateCSVFile_WhenHeaderNotAvailable_ThrowsException()
@@ -50,7 +50,7 @@ public class IndiaAnalyzerTest
       }
       catch (CensusAnalyserException e)
       {
-         Assert.assertEquals(CensusAnalyserException.ExceptionType.UNABLE_TO_PARSE, e.type);
+         Assert.assertEquals(CensusAnalyserException.ExceptionType.UNABLE_TO_IDENTIFY_DELIMITER, e.type);
       }
    }
 
@@ -62,7 +62,7 @@ public class IndiaAnalyzerTest
       {
          ExpectedException exceptionRule = ExpectedException.none();
          exceptionRule.expect(CensusAnalyserException.class);
-         adapter.loadCensusData(WRONG_DELIMITER_FILE_PATH);
+         adapter.loadCensusData(WRONG_DELIMITER_FILE_PATH, INDIA_CODE_CSV_FILE_PATH);
       }
       catch (CensusAnalyserException e)
       {
@@ -77,7 +77,7 @@ public class IndiaAnalyzerTest
       {
          ExpectedException exceptionRule = ExpectedException.none();
          exceptionRule.expect(CensusAnalyserException.class);
-         adapter.loadCensusData(WRONG_CENSUS_CSV_FILE_PATH);
+         adapter.loadCensusData(WRONG_CENSUS_CSV_FILE_PATH, INDIA_CODE_CSV_FILE_PATH);
       }
       catch (CensusAnalyserException e)
       {
@@ -92,14 +92,13 @@ public class IndiaAnalyzerTest
       {
          ExpectedException exceptionRule = ExpectedException.none();
          exceptionRule.expect(CensusAnalyserException.class);
-         adapter.loadCensusData(INDIA_CODE_CSV_FILE_PATH,INDIA_CENSUS_CSV_FILE_PATH);
+         adapter.loadCensusData(INDIA_CODE_CSV_FILE_PATH, INDIA_CENSUS_CSV_FILE_PATH);
       }
       catch (CensusAnalyserException e)
       {
-         Assert.assertEquals(CensusAnalyserException.ExceptionType.UNABLE_TO_PARSE, e.type);
+         Assert.assertEquals(CensusAnalyserException.ExceptionType.UNABLE_TO_IDENTIFY_DELIMITER, e.type);
       }
    }
-
 
    @Test
    public void givenIndianCensusCSVFile_WhenFileEmpty_ShouldThrowException()
@@ -108,11 +107,11 @@ public class IndiaAnalyzerTest
       {
          ExpectedException exceptionRule = ExpectedException.none();
          exceptionRule.expect(CensusAnalyserException.class);
-         adapter.loadCensusData(EMPTY_FILE_PATH);
+         adapter.loadCensusData(EMPTY_FILE_PATH, INDIA_CODE_CSV_FILE_PATH);
       }
       catch (CensusAnalyserException e)
       {
-         Assert.assertEquals(CensusAnalyserException.ExceptionType.UNABLE_TO_PARSE, e.type);
+         Assert.assertEquals(CensusAnalyserException.ExceptionType.UNABLE_TO_IDENTIFY_DELIMITER, e.type);
       }
    }
 
@@ -123,7 +122,7 @@ public class IndiaAnalyzerTest
       {
          ExpectedException exceptionRule = ExpectedException.none();
          exceptionRule.expect(CensusAnalyserException.class);
-         adapter.loadCensusData(NO_FILE_PATH);
+         adapter.loadCensusData(NO_FILE_PATH, INDIA_CODE_CSV_FILE_PATH);
       }
       catch (CensusAnalyserException e)
       {

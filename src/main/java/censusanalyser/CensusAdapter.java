@@ -15,23 +15,21 @@ import java.util.stream.StreamSupport;
 
 public abstract class CensusAdapter
 {
+   public CensusAdapter()
+   {
+   }
+
+   Map<String, CensusDAO> censusMap = new HashMap<>();
+
    public abstract Map<String, CensusDAO> loadCensusData(String... csvFilePath) throws CensusAnalyserException;
 
-   public <E> Map<String, CensusDAO> loadCensusData(Class<E> censusCSVClass, String...csvFilePath) throws CensusAnalyserException
+   public <E> Map<String, CensusDAO> loadCensusData(Class<E> censusCSVClass, String... csvFilePath) throws CensusAnalyserException
    {
-      Map<String, CensusDAO> censusMap = new HashMap<>();
       Iterator<E> csvFileIterator;
       try (Reader reader = Files.newBufferedReader(Paths.get(csvFilePath[0])))
       {
          ICSVBuilder csvBuilder = CSVBuilderFactory.createCSVBuilder();
-         try
-         {
-            csvFileIterator = csvBuilder.getCSVFileIterator(reader, censusCSVClass);
-         }
-         catch (RuntimeException e)
-         {
-            throw new CensusAnalyserException(e.getMessage(), CensusAnalyserException.ExceptionType.UNABLE_TO_PARSE);
-         }
+         csvFileIterator = csvBuilder.getCSVFileIterator(reader, censusCSVClass);
          Iterable<E> csvIterable = () -> csvFileIterator;
          if (censusCSVClass.getName().equals("censusanalyser.IndiaCensusCSV"))
          {

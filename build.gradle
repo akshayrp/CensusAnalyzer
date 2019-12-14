@@ -16,6 +16,6 @@ dependencies {
     compile 'com.google.code.gson:gson:2.2.+'
     compile "com.opencsv:opencsv:4.0"
     compile group: 'org.apache.commons', name: 'commons-csv', version: '1.4'
-    compile (files("/home/admin1/IdeaProjects/CensusAnalyser/CensusAnalyser/out/artifacts/Analyser/Analyser.jar"))
+    compile (files("/home/admin1/Desktop/CSVBuilder.main.jar"))
 
 }
